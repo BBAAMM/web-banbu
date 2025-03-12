@@ -1,0 +1,43 @@
+2025-03-10 09:29:18.594 [INFO ] [main] com.banbu.kim.KimApplication - Starting KimApplication using Java 23.0.2 with PID 14588 (E:\web\kim\build\classes\java\main started by devel in E:\web\kim)
+2025-03-10 09:29:18.594 [INFO ] [main] com.banbu.kim.KimApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-10 09:29:19.510 [INFO ] [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-10 09:29:19.562 [INFO ] [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 1 JPA repository interface.
+2025-03-10 09:29:19.750 [INFO ] [main] o.s.cloud.context.scope.GenericScope - BeanFactory id=657a24f9-0a94-350a-99bf-6c897a9706aa
+2025-03-10 09:29:20.249 [INFO ] [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-03-10 09:29:20.261 [INFO ] [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-10 09:29:20.261 [INFO ] [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-10 09:29:20.330 [INFO ] [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-10 09:29:20.337 [INFO ] [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1677 ms
+2025-03-10 09:29:20.591 [INFO ] [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-10 09:29:20.676 [INFO ] [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-10 09:29:20.711 [INFO ] [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-10 09:29:21.000 [INFO ] [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-10 09:29:21.011 [INFO ] [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-10 09:29:21.246 [INFO ] [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64544ee4
+2025-03-10 09:29:21.248 [INFO ] [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-10 09:29:21.277 [WARN ] [main] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-10 09:29:21.277 [WARN ] [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-10 09:29:21.295 [INFO ] [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-10 09:29:21.965 [INFO ] [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-10 09:29:22.015 [INFO ] [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-10 09:29:22.196 [WARN ] [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-10 09:29:23.973 [INFO ] [main] o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-03-10 09:29:24.010 [INFO ] [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-03-10 09:29:25.027 [INFO ] [main] o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-03-10 09:29:25.037 [INFO ] [main] com.banbu.kim.KimApplication - Started KimApplication in 8.04 seconds (process running for 8.704)
+2025-03-10 09:29:25.054 [INFO ] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-10 09:29:25.055 [INFO ] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-10 09:29:25.056 [INFO ] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-03-10 09:29:25.454 [INFO ] [http-nio-8080-exec-6] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 221 ms
+2025-03-10 09:29:35.134 [INFO ] [http-nio-8080-exec-5] c.b.k.s.impl.AptTradeServiceImpl - 아파트 실거래가 데이터 저장 시작 - 법정동코드: 11110, 거래년월: 202409
+2025-03-10 09:29:35.135 [INFO ] [http-nio-8080-exec-5] c.b.k.s.impl.AptTradeServiceImpl - 1페이지 데이터 조회 시작
+2025-03-10 09:29:35.296 [INFO ] [http-nio-8080-exec-5] c.b.k.s.impl.AptTradeServiceImpl - 1페이지 데이터 수: 30
+2025-03-10 09:29:35.403 [INFO ] [http-nio-8080-exec-5] c.b.k.s.impl.AptTradeServiceImpl - 1페이지 저장 완료 - 성공: 30, 실패: 0
+2025-03-10 09:29:35.404 [INFO ] [http-nio-8080-exec-5] c.b.k.s.impl.AptTradeServiceImpl - 아파트 실거래가 데이터 저장 완료 - 총 저장 건수: 30
