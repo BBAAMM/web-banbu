@@ -100,8 +100,6 @@ public class RegionServiceImpl implements RegionService {
 
     @Override
     public List<RegionDong> getRegionDongsByRegionCode(RegionCode regionCode) {
-        return regionDongRepository.findByCityCodeAndGuCode(
-                regionCode.getId().getCityCode(),
-                regionCode.getId().getGuCode());
+        return regionDongRepository.findById_GuCode(regionCode.getId().getGuCode());
     }
 }

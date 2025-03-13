@@ -13,8 +13,6 @@ public interface RegionDongRepository extends JpaRepository<RegionDong, Long> {
 
     Optional<RegionDong> findById_GuCodeAndId_Dong(Integer guCode, String dong);
 
-    List<RegionDong> findByCityCodeAndGuCode(Integer cityCode, Integer guCode);
-
     List<RegionDong> findByCityAndGu(String city, String gu);
 
     void deleteById_GuCode(Integer guCode);
