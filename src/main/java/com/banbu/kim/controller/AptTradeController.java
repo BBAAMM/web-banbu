@@ -13,36 +13,36 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
-@Tag(name = "아파트 실거래가 API")
+@Tag(name = "Apartment Sales Data API")
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(value = "/apt-trade", produces = MediaType.APPLICATION_XML_VALUE)
 public class AptTradeController {
     private final AptTradeService aptTradeService;
 
-    @Operation(summary = "실거래가 조회")
+    @Operation(summary = "Request Apartment Sales Data")
     @ApiResponses(value = {
-            @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "200", description = "조회 성공"),
-            @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "400", description = "잘못된 요청")
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "200", description = "Request Success"),
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "400", description = "Request Failed")
     })
     @GetMapping("/sales")
     public AptTradeResponse getAptTrade(
-            @Parameter(description = "페이지 번호", example = "1") @RequestParam(defaultValue = "1") int pageNo,
-            @Parameter(description = "페이지당 데이터 수", example = "10") @RequestParam(defaultValue = "10") int numOfRows,
-            @Parameter(description = "법정동코드", example = "11110") @RequestParam String lawdCd,
-            @Parameter(description = "거래년월(YYYYMM)", example = "202403") @RequestParam String dealYmd) {
+            @RequestParam(defaultValue = "1") int pageNo,
+            @RequestParam(defaultValue = "10") int numOfRows,
+            @RequestParam(defaultValue = "11110") String lawdCd,
+            @RequestParam(defaultValue = "202409") String dealYmd) {
         return aptTradeService.getAptTradeData(pageNo, numOfRows, lawdCd, dealYmd);
     }
 
-    @Operation(summary = "특정 지역 실거래가 데이터 저장")
+    @Operation(summary = "Save Specific Region Apartment Sales Data")
     @ApiResponses(value = {
-            @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "200", description = "저장 성공", content = @Content(schema = @Schema(implementation = AptTradeResponse.class))),
-            @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "400", description = "잘못된 요청")
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "200", description = "Save Success", content = @Content(schema = @Schema(implementation = AptTradeResponse.class))),
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "400", description = "Save Failed")
     })
     @PostMapping("/save")
     public AptTradeResponse saveAptTrade(
-            @Parameter(description = "법정동코드", example = "11110") @RequestParam String lawdCd,
-            @Parameter(description = "거래년월(YYYYMM)", example = "202403") @RequestParam String dealYmd) {
+            @RequestParam(defaultValue = "11110") String lawdCd,
+            @RequestParam(defaultValue = "202409") String dealYmd) {
         int totalSaved = aptTradeService.saveAptTradeData(lawdCd, dealYmd);
 
         AptTradeResponse response = new AptTradeResponse();
@@ -56,10 +56,10 @@ public class AptTradeController {
         return response;
     }
 
-    @Operation(summary = "전체 지역 실거래가 데이터 저장")
+    @Operation(summary = "Save All Region Apartment Sales Data")
     @ApiResponses(value = {
-            @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "200", description = "저장 성공", content = @Content(schema = @Schema(implementation = AptTradeResponse.class))),
-            @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "400", description = "잘못된 요청")
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "200", description = "Save Success", content = @Content(schema = @Schema(implementation = AptTradeResponse.class))),
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "400", description = "Save Failed")
     })
     @PostMapping("/save-all-regions")
     public AptTradeResponse saveAllRegionsAptTrade(
